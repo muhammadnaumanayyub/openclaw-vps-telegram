@@ -65,3 +65,18 @@ Result: OpenClaw 2026.3.28 (f9b1079) — confirmed working.
 - Created bot name and username
 - Saved the bot token securely
 
+## Step 10 — Get Google Gemini API Key
+- Visited aistudio.google.com
+- Signed in with Google account
+- Created a new API key (free tier)
+- Key looks like: AIzaSyxxxxxxxxxxxxxxxxx
+- Free tier: 60 requests/minute, 1 million tokens/day
+- No credit card required
+
+## Step 11 — OpenClaw Onboarding
+```bash
+openclaw onboard --install-daemon
+```
+- --install-daemon flag registers OpenClaw as systemd service
+- Survives server reboots automatically
+- Wizard asks for: LLM provider, API key, model, chat channel
