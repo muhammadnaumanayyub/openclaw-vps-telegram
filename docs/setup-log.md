@@ -140,4 +140,18 @@ Result:
 - 3 warnings noted (security recommendations, not errors)
 - All warnings are for advanced multi-user setups, not applicable to our single user personal lab
 
+## Step 14 — Telegram Pairing
+Command used:
+openclaw pairing approve telegram KDXEAHUE
+
+Result: Approved telegram sender successfully.
+
+## Step 15 — First Successful Test
+Sent from Telegram: "What is my server uptime?"
+Response received: "Your server has been up for 25 days 50 minutes."
+
+Full stack confirmed working:
+Telegram → OpenClaw Gateway → Gemini 2.5 Flash → VPS → Response → Telegram
+
+Lab completed successfully.
 
