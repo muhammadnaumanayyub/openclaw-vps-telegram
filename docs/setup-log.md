@@ -148,10 +148,27 @@ Result: Approved telegram sender successfully.
 
 ## Step 15 — First Successful Test
 Sent from Telegram: "What is my server uptime?"
-Response received: "Your server has been up for 25 days 50 minutes."
+Response received: "Your server has been up for XX days XX minutes."
 
-Full stack confirmed working:
-Telegram → OpenClaw Gateway → Gemini 2.5 Flash → VPS → Response → Telegram
+## Step 16 — Security Hardening
 
-Lab completed successfully.
+Verified config file ~/.openclaw/openclaw.json contains:
+- gateway.bind = loopback (127.0.0.1 only, not public internet)
+- dmPolicy = pairing (only paired users can chat)
+- groupPolicy = allowlist (groups need explicit permission)
+- requireMention = true (bot only responds when mentioned)
+- denyCommands = camera, sms, contacts, calendar blocked
+
+File permissions verified:
+- ~/.openclaw/ → drwx------ (700) only root can access
+- openclaw.json → -rw------- (600) only root can read/write
+- credentials/ → drwx------ (700) only root can access
+
+Commands used:
+chmod 600 ~/.openclaw/openclaw.json
+chmod 700 ~/.openclaw/
+
+## Lab Complete
+All phases finished successfully.
+Full stack working: Telegram → OpenClaw → Gemini 2.5 Flash → VPS → Telegram
 
