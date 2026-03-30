@@ -39,4 +39,10 @@ nvm alias default 24
 ```
 Installs Node.js version 24 and sets it as default.
 
+## Step 6 — Verify Node.js Installation
+```bash
+node --version && npm --version
+```
+Result: Node.js v24.14.1 | npm 11.11.0 — confirmed working.
+
 
