@@ -53,3 +53,10 @@ npm = Node Package Manager (comes with Node.js, like apt but for JavaScript)
 -g = install globally so openclaw command works from anywhere
 @latest = always install the most recent stable version
 
+## Step 8 — Verify OpenClaw Installation
+```bash
+openclaw --version
+```
+Result: OpenClaw 2026.3.28 (f9b1079) — confirmed working.
+
+
