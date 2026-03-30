@@ -45,4 +45,11 @@ node --version && npm --version
 ```
 Result: Node.js v24.14.1 | npm 11.11.0 — confirmed working.
 
+## Step 7 — Install OpenClaw
+```bash
+npm install -g openclaw@latest
+```
+npm = Node Package Manager (comes with Node.js, like apt but for JavaScript)
+-g = install globally so openclaw command works from anywhere
+@latest = always install the most recent stable version
 
