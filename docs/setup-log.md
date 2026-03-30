@@ -59,4 +59,9 @@ openclaw --version
 ```
 Result: OpenClaw 2026.3.28 (f9b1079) — confirmed working.
 
+## Step 9 — Create Telegram Bot
+- Opened Telegram and searched for @BotFather
+- Sent /newbot command
+- Created bot name and username
+- Saved the bot token securely
 
