@@ -80,3 +80,64 @@ openclaw onboard --install-daemon
 - --install-daemon flag registers OpenClaw as systemd service
 - Survives server reboots automatically
 - Wizard asks for: LLM provider, API key, model, chat channel
+
+## Step 12 — OpenClaw Onboarding Wizard
+Command used:
+openclaw onboard --install-daemon
+
+Options selected and reasons:
+
+1. Security Warning → Yes
+   Acknowledged security risks. Single user personal setup.
+
+2. Setup Mode → QuickStart
+   Faster setup, can configure details later via openclaw configure.
+
+3. Model Provider → Google
+   Selected Google Gemini — free tier, no credit card required.
+
+4. Auth Method → Google Gemini API key
+   Used API key generated from aistudio.google.com.
+
+5. Default Model → google/gemini-2.5-flash
+   Free, fast, stable. Flash models optimized for everyday tasks.
+   Avoided preview models — not stable enough for lab.
+
+6. Channel → Telegram (Bot API)
+   Most beginner friendly, recommended by OpenClaw itself.
+
+7. Search Provider → DuckDuckGo (experimental)
+   Completely free, no API key required. Good enough for basic searches.
+
+8. Skills installed:
+   - clawhub → official OpenClaw skill manager, safe and verified
+   - session-logs → logs conversations, useful for debugging
+
+9. Homebrew → No
+   Homebrew is a Mac package manager. We are on Ubuntu Linux.
+
+10. Node manager → npm
+    Already installed with Node.js 24.
+
+11. Google Places API → No
+    We did not install goplaces skill.
+
+12. OpenAI API key → No
+    We are using Gemini not OpenAI.
+
+13. Hooks → session-memory only
+    Gives OpenClaw memory across conversations.
+    Remembers context between Telegram messages.
+
+## Step 13 — Verify OpenClaw Status
+Command used:
+openclaw status
+
+Result:
+- Telegram channel: ON and OK
+- Bot token accepted and connected
+- No sessions yet (expected — not paired yet)
+- 3 warnings noted (security recommendations, not errors)
+- All warnings are for advanced multi-user setups, not applicable to our single user personal lab
+
+
